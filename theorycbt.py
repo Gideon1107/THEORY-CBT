@@ -25,12 +25,13 @@ def cbt_theory():
     for i in question:
         que = question[i]
         print(i,'.',que[0])
-        ans = ('Type in your answer: ')
+        ans = input('Type in your answer: ')
         for i in answer:
             key_word = answer[i]
-        if any(i in key_word[0] for i in ans.split()):
-            score += 5
-        else:
-            pass
+        while i in answer:
+            if any(i in key_word[0] for i in ans.split()):
+                score += 5
+            else:
+                pass
     print('YOUR TOTAL SCORE IS',score,'.')
 cbt_theory()
